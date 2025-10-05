@@ -9,6 +9,7 @@ import CompanyRedirect from 'Pages/CompanyPage/CompanyRedirect'
 import { createBrowserRouter, Navigate } from 'react-router-dom'
 import CompanyBalanceSheet from 'Pages/CompanyPage/SubPages/CompanyBalanceSheet'
 import CompanyCashFlow from 'Pages/CompanyPage/SubPages/CompanyCashFlow'
+import NotFound from 'Pages/NotFound/NotFound'
 
 export const router = createBrowserRouter([
     {
@@ -52,6 +53,11 @@ export const router = createBrowserRouter([
                         element: <CompanyCashFlow />
                     }
                 ]
+            }
+            ,
+            {
+                path: "*",
+                element: <NotFound />
             }
         ]
     }

@@ -1,0 +1,12 @@
+.company-logo-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.company-logo{
+    width: 100px;
+    height: 100px;
+    color: #ccc;
+    object-fit: contain;
+}

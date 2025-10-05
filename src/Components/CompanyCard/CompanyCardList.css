@@ -1,0 +1,44 @@
+.company-card-list {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    flex-wrap: wrap;
+    padding: 10px;
+}
+.company-card-list .company-card {
+    display: flex;
+    flex-direction: row;
+    flex-grow: 0;
+    flex-basis: 500px;
+    gap: 10px;
+    background-color: rgb(212, 219, 230);
+    text-decoration: none;
+    color: black;
+    padding: 10px;
+    border-radius: 10px;
+    & .stock-info {
+        display: flex;
+        flex-direction: column;
+        padding: 10px;
+        gap: 10px;
+        white-space: nowrap;
+        & .text {
+            font-size: 14px;
+        }
+        & .ticker-symbol{
+            color: #669aac;
+        }
+        & .exchangeFullName{
+            font-weight: bold;
+            font-size: 18px;
+        }
+    }
+    & .company-card-form {
+        margin: 0 0 auto auto;
+    }
+}
+.company-card-list .company-card:hover {
+    background-color: rgb(180, 187, 197);
+    cursor: pointer;
+    transition: all 0.3s ease;
+}

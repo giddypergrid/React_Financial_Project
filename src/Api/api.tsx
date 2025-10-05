@@ -1,5 +1,5 @@
 import axios, { AxiosResponse } from "axios";
-import { CompanyIncomeStatement, CompanyKeyMetrics, CompanyProfile, CompanySearch2, CompanyBalanceSheet, CompanyCashFlow, CompanyTenK } from "Types/company";
+import { CompanyIncomeStatement, CompanyKeyMetrics, CompanyProfile, CompanySearch, CompanyBalanceSheet, CompanyCashFlow, CompanyTenK } from "Types/company";
 
 const generalErrorProcess = (error: any, logoutinfo: string) => {
     if(axios.isAxiosError(error)){
@@ -13,7 +13,7 @@ const generalErrorProcess = (error: any, logoutinfo: string) => {
 
 const searchCompanies = async (query: string) => {
     try{
-        const response = await axios.get<CompanySearch2[]>(`https://financialmodelingprep.com/stable/historical-price-eod/light?symbol=${query}&apikey=${process.env.REACT_APP_FINANCIAL_KEY}`)
+        const response = await axios.get<CompanySearch[]>(`https://financialmodelingprep.com/stable/search-symbol?query=${query}&apikey=${process.env.REACT_APP_FINANCIAL_KEY}`)
         return response;
     } catch (error) {
         return generalErrorProcess(error, 'searchCompanies');

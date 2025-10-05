@@ -1,0 +1,117 @@
+interface LogoConfig {
+  [ticker: string]: string;
+}
+
+const COMPANY_LOGOS: LogoConfig = {
+  'AAPL': 'https://financialmodelingprep.com/image-stock/AAPL.png',
+  'MSFT': 'https://financialmodelingprep.com/image-stock/MSFT.png',
+  'GOOGL': 'https://financialmodelingprep.com/image-stock/GOOGL.png',
+  'GOOG': 'https://financialmodelingprep.com/image-stock/GOOG.png',
+  'AMZN': 'https://financialmodelingprep.com/image-stock/AMZN.png',
+  'META': 'https://financialmodelingprep.com/image-stock/META.png',
+  'TSLA': 'https://financialmodelingprep.com/image-stock/TSLA.png',
+  'NVDA': 'https://financialmodelingprep.com/image-stock/NVDA.png',
+  'NFLX': 'https://financialmodelingprep.com/image-stock/NFLX.png',
+  'ORCL': 'https://financialmodelingprep.com/image-stock/ORCL.png',
+  'CRM': 'https://financialmodelingprep.com/image-stock/CRM.png',
+  'ADBE': 'https://financialmodelingprep.com/image-stock/ADBE.png',
+  'INTC': 'https://financialmodelingprep.com/image-stock/INTC.png',
+  'AMD': 'https://financialmodelingprep.com/image-stock/AMD.png',
+  'IBM': 'https://financialmodelingprep.com/image-stock/IBM.png',
+  'CSCO': 'https://financialmodelingprep.com/image-stock/CSCO.png',
+  'PYPL': 'https://financialmodelingprep.com/image-stock/PYPL.png',
+  'UBER': 'https://financialmodelingprep.com/image-stock/UBER.png',
+  'SPOT': 'https://financialmodelingprep.com/image-stock/SPOT.png',
+  'SNAP': 'https://financialmodelingprep.com/image-stock/SNAP.png',
+  'SQ': 'https://financialmodelingprep.com/image-stock/SQ.png',
+  'SHOP': 'https://financialmodelingprep.com/image-stock/SHOP.png',
+  'ZM': 'https://financialmodelingprep.com/image-stock/ZM.png',
+
+  'JPM': 'https://financialmodelingprep.com/image-stock/JPM.png',
+  'BAC': 'https://financialmodelingprep.com/image-stock/BAC.png',
+  'WFC': 'https://financialmodelingprep.com/image-stock/WFC.png',
+  'GS': 'https://financialmodelingprep.com/image-stock/GS.png',
+  'MS': 'https://financialmodelingprep.com/image-stock/MS.png',
+  'C': 'https://financialmodelingprep.com/image-stock/C.png',
+  'AXP': 'https://financialmodelingprep.com/image-stock/AXP.png',
+  'V': 'https://financialmodelingprep.com/image-stock/V.png',
+  'MA': 'https://financialmodelingprep.com/image-stock/MA.png',
+  'BRK.A': 'https://financialmodelingprep.com/image-stock/BRK.A.png',
+  'BRK.B': 'https://financialmodelingprep.com/image-stock/BRK.B.png',
+
+  'JNJ': 'https://financialmodelingprep.com/image-stock/JNJ.png',
+  'PFE': 'https://financialmodelingprep.com/image-stock/PFE.png',
+  'UNH': 'https://financialmodelingprep.com/image-stock/UNH.png',
+  'MRNA': 'https://financialmodelingprep.com/image-stock/MRNA.png',
+  'ABBV': 'https://financialmodelingprep.com/image-stock/ABBV.png',
+  'TMO': 'https://financialmodelingprep.com/image-stock/TMO.png',
+  'ABT': 'https://financialmodelingprep.com/image-stock/ABT.png',
+  'BMY': 'https://financialmodelingprep.com/image-stock/BMY.png',
+  'CVS': 'https://financialmodelingprep.com/image-stock/CVS.png',
+  'MRK': 'https://financialmodelingprep.com/image-stock/MRK.png',
+
+  'WMT': 'https://financialmodelingprep.com/image-stock/WMT.png',
+  'HD': 'https://financialmodelingprep.com/image-stock/HD.png',
+  'TGT': 'https://financialmodelingprep.com/image-stock/TGT.png',
+  'COST': 'https://financialmodelingprep.com/image-stock/COST.png',
+  'NKE': 'https://financialmodelingprep.com/image-stock/NKE.png',
+  'SBUX': 'https://financialmodelingprep.com/image-stock/SBUX.png',
+  'MCD': 'https://financialmodelingprep.com/image-stock/MCD.png',
+  'DIS': 'https://financialmodelingprep.com/image-stock/DIS.png',
+  'KO': 'https://financialmodelingprep.com/image-stock/KO.png',
+  'PEP': 'https://financialmodelingprep.com/image-stock/PEP.png',
+  'PG': 'https://financialmodelingprep.com/image-stock/PG.png',
+
+  'XOM': 'https://financialmodelingprep.com/image-stock/XOM.png',
+  'CVX': 'https://financialmodelingprep.com/image-stock/CVX.png',
+  'COP': 'https://financialmodelingprep.com/image-stock/COP.png',
+  'NEE': 'https://financialmodelingprep.com/image-stock/NEE.png',
+
+  'BA': 'https://financialmodelingprep.com/image-stock/BA.png',
+  'CAT': 'https://financialmodelingprep.com/image-stock/CAT.png',
+  'GE': 'https://financialmodelingprep.com/image-stock/GE.png',
+  'MMM': 'https://financialmodelingprep.com/image-stock/MMM.png',
+  'HON': 'https://financialmodelingprep.com/image-stock/HON.png',
+  'LMT': 'https://financialmodelingprep.com/image-stock/LMT.png',
+  'RTX': 'https://financialmodelingprep.com/image-stock/RTX.png',
+  'UPS': 'https://financialmodelingprep.com/image-stock/UPS.png',
+  'FDX': 'https://financialmodelingprep.com/image-stock/FDX.png',
+
+  'AMT': 'https://financialmodelingprep.com/image-stock/AMT.png',
+  'PLD': 'https://financialmodelingprep.com/image-stock/PLD.png',
+  'CCI': 'https://financialmodelingprep.com/image-stock/CCI.png',
+
+  'T': 'https://financialmodelingprep.com/image-stock/T.png',
+  'VZ': 'https://financialmodelingprep.com/image-stock/VZ.png',
+  'TMUS': 'https://financialmodelingprep.com/image-stock/TMUS.png',
+
+  'SPY': 'https://financialmodelingprep.com/image-stock/SPY.png',
+  'QQQ': 'https://financialmodelingprep.com/image-stock/QQQ.png',
+  'IWM': 'https://financialmodelingprep.com/image-stock/IWM.png',
+  'VTI': 'https://financialmodelingprep.com/image-stock/VTI.png',
+  'VOO': 'https://financialmodelingprep.com/image-stock/VOO.png',
+
+  'COIN': 'https://financialmodelingprep.com/image-stock/COIN.png',
+  'MSTR': 'https://financialmodelingprep.com/image-stock/MSTR.png',
+
+  'PLTR': 'https://financialmodelingprep.com/image-stock/PLTR.png',
+  'SNOW': 'https://financialmodelingprep.com/image-stock/SNOW.png',
+  'ROKU': 'https://financialmodelingprep.com/image-stock/ROKU.png',
+  'DKNG': 'https://financialmodelingprep.com/image-stock/DKNG.png',
+  'RBLX': 'https://financialmodelingprep.com/image-stock/RBLX.png',
+  'RIVN': 'https://financialmodelingprep.com/image-stock/RIVN.png',
+  'LCID': 'https://financialmodelingprep.com/image-stock/LCID.png',
+
+  'BABA': 'https://financialmodelingprep.com/image-stock/BABA.png',
+  'TSM': 'https://financialmodelingprep.com/image-stock/TSM.png',
+  'ASML': 'https://financialmodelingprep.com/image-stock/ASML.png',
+  'SAP': 'https://financialmodelingprep.com/image-stock/SAP.png',
+  'TM': 'https://financialmodelingprep.com/image-stock/TM.png',
+  'NVO': 'https://financialmodelingprep.com/image-stock/NVO.png',
+  'NESN': 'https://financialmodelingprep.com/image-stock/NESN.png',
+};
+
+export const getCompanyLogUrl = (ticker: string): string => {
+  const value = COMPANY_LOGOS[ticker.toUpperCase()]
+  return value;
+};

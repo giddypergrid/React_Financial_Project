@@ -1,17 +1,10 @@
 export interface CompanySearch {
     currency: string;
-    exchangeShortName: string;
+    exchangeFullName: string;
     name: string;
-    stockExchange: string;
+    exchange: string;
     symbol: string;
-  }
-  interface CompanySearch2 {
-    symbol: string;
-    date: string;
-    price: number;
-    volume: number;
-    
-  }
+}
   export interface CompanyProfile {
     symbol: string;
     price: number;
@@ -116,7 +109,7 @@ export interface CompanySearch {
     symbol: string;
     reportedCurrency: string;
     cik: string;
-    fillingDate: string;
+    filingDate: string;
     acceptedDate: string;
     calendarYear: string;
     period: string;
@@ -157,7 +150,7 @@ export interface CompanySearch {
     symbol: string;
     reportedCurrency: string;
     cik: string;
-    fillingDate: string;
+    filingDate: string;
     acceptedDate: string;
     calendarYear: string;
     period: string;

@@ -1,0 +1,43 @@
+.portfolio-card-list{
+    & ul {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
+    
+    & li {
+        color: black;
+        flex: 0 0 150px;
+        background-color: rgb(212, 219, 230);
+        padding: 10px;
+        border-radius: 10px;
+    }
+    & span {
+        padding-left: 2px;
+        font-size: 18px;
+        font-weight: bold;
+    }
+    & a {
+        text-decoration: none;
+        color: black;
+        display: flex;
+        flex-direction: row;
+    }
+}
+.portfolio-content {
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    border-bottom: 2px solid #ddd;
+}
+
+.portfolio-title {
+    font-size: 30px;
+    font-weight: 600;
+    color: #2c3542;
+    font-style: italic;
+}

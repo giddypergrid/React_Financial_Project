@@ -1,16 +1,18 @@
 import React, { ChangeEvent, SyntheticEvent, useState } from 'react';
 import './SearchPage.css';
-import CardList from 'Components/Card/CardList';
-import { CompanySearch2 } from 'Types/company';
+import CompanyCardList from 'Components/CompanyCard/CompanyCardList';
+import { CompanySearch } from 'Types/company';
 import { searchCompanies } from 'Api/api';
 import PortfolioList from 'Components/Portfolio/PortfolioList';
 import SearchBar from 'Components/SearchBar/SearchBar';
+import check_response from 'Api/apiProcess';
+import { MdOutlinePageview } from 'react-icons/md';
+
 type Props = {}
 
 function SearchPage({}: Props) {
     const [search, setSearch] = useState<string>('');
-    const [searchResults, setSearchResults] = useState<CompanySearch2[]>([]);
-    const [apiRequestError, setApiRequestError] = useState<string>('');
+    const [searchResults, setSearchResults] = useState<CompanySearch[]>([]);
     const [stockPortfolioValues, setStockPortfolioValues] = useState<string[]>([]);
 
     const onSearchChange = (e: ChangeEvent<HTMLInputElement>) => {
@@ -32,13 +34,11 @@ function SearchPage({}: Props) {
     const onSearchSubmit = async (e: SyntheticEvent) => {
     e.preventDefault();
 
-    const results = await searchCompanies(search);
-    if (typeof results === 'string') {
-        setApiRequestError(results);
-    } else if (Array.isArray(results.data)){
-        setSearchResults(results.data);
-        apiRequestError && setApiRequestError('');
-    } 
+    const response = await searchCompanies(search);
+    const isValid = response ? check_response(response) : false;
+    if (isValid && response && typeof response !== 'string') {
+        setSearchResults(response?.data);
+    }
     }
     return (
     <div className="search-page">
@@ -47,12 +47,10 @@ function SearchPage({}: Props) {
           onSearchChange={onSearchChange}
           onSearchSubmit={onSearchSubmit}
         />
-        {apiRequestError && <div className="error-message">{apiRequestError}</div>}
         <div className="search-page-content">
-        <PortfolioList symbolList={stockPortfolioValues} removePortfolio={removePortfolio} />
-        <main>
-            <CardList CardListData={searchResults.slice(0, 10)} addPortfolio={addPortfolio} />
-        </main>
+            <PortfolioList symbolList={stockPortfolioValues} removePortfolio={removePortfolio} />
+            {searchResults.length > 0 ? <CompanyCardList CardListData={searchResults} addPortfolio={addPortfolio} />
+            : <MdOutlinePageview className='no-search-icon'/>}
         </div>
     </div>
     );

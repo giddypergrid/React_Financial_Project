@@ -12,9 +12,8 @@ interface Props {
 }
 
 const MetricsRowList: React.FC<Props> = ({data}: Props) => {
-  console.log(data);
   return (
-    <div>
+    <div className='scrollable-area financial-ratios-list' style={{maxHeight: '65vh'}}>
       <h2>Company Financial Ratios</h2>
       <ul>
         {data.map((company) => (

@@ -1,28 +1,27 @@
 import React from 'react';
-import Card from './Card';
-import './CardList.css';
+import CompanyCard from './CompanyCard';
 import { JSX } from 'react/jsx-runtime';
-import { CompanySearch2 } from 'Types/company';
-import { v4 as uuidv4 } from 'uuid';
+import { CompanySearch } from 'Types/company';
+import './CompanyCardList.css';
+
 
 interface Props {
-    CardListData: CompanySearch2[];
+    CardListData: CompanySearch[];
     addPortfolio: (e: any) => void;
 }
 
-const CardList: React.FC<Props> = ({ CardListData, addPortfolio }): JSX.Element => {
+const CompanyCardList: React.FC<Props> = ({ CardListData, addPortfolio }): JSX.Element => {
     // Sort stocks by ticker alphabetically
     const sortedStocks = [...CardListData].sort((a, b) => 
         a.symbol.localeCompare(b.symbol)
     );
 
     return (
-        <div className="card-list">
+        <div className="company-card-list">
             {sortedStocks.length > 0 ? (
                 sortedStocks.map((stock, index) => (
-                    <Card
-                        key={`${stock.symbol}-${stock.date}-${index}`}
-                        id={stock.symbol}
+                    <CompanyCard
+                        key={stock.symbol}
                         data={stock}
                         addPortfolio={addPortfolio}
                     />
@@ -34,4 +33,4 @@ const CardList: React.FC<Props> = ({ CardListData, addPortfolio }): JSX.Element 
     );
 };
 
-export default CardList;
+export default CompanyCardList;

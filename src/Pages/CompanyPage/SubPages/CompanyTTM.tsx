@@ -31,10 +31,6 @@ const CompanyTTM = (props: Props) => {
 
   const metricsData = companyKeyMetrics ? Object.entries(companyKeyMetrics).map(([key, value], index) => {
     const explanation = getMetricExplanation(key);
-    // Debug: log keys that don't have explanations
-    if (!explanation) {
-      console.log('No explanation found for key:', key);
-    }
     return {
       id: index,
       MetricsName: key,

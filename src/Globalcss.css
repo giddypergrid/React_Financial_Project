@@ -1,4 +1,1 @@
-:root {
-  --sidebar-width: calc(var(--original-window-width, 1920px) / 7);
-  --company-header-tile-width: calc((var(--original-window-width, 1920px) - var(--sidebar-width)) / 4);
-}
+
