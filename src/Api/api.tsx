@@ -93,4 +93,4 @@ const getTenKData = async(query: string, page: number, limit: number) => {
         return generalErrorProcess(error, 'getTenKData');
     }
 }
-export { searchCompanies, getCompanyProfile, getCompanyKeyMetrics, getCompanyIncomeStatement, getCompanyBalanceSheet, getCompanyCashFlow, getCompanyPeers, getTenKData};
+export { searchCompanies, getCompanyProfile, getCompanyKeyMetrics, getCompanyIncomeStatement, getCompanyBalanceSheet, getCompanyCashFlow, getCompanyPeers, getTenKData, generalErrorProcess};

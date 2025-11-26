@@ -4,6 +4,7 @@ import './App.css';
 import Navibar from './Components/Navibar/Navibar';
 import { setOriginalWindowSize } from 'Utils/windowSize';
 import OverlayMessageBoard from 'Components/Modal/OverlayMessageBoard';
+import { UserProvider } from 'Context/Auth';
 
 function App() {
   useEffect(() => {
@@ -12,11 +13,13 @@ function App() {
 
   return (
     <div className="App">
-      <Navibar />
-      <div className="app-content">
-        <Outlet />
-      </div>
-      <OverlayMessageBoard />
+      <UserProvider>
+        <Navibar />
+        <div className="app-content">
+          <Outlet />
+        </div>
+        <OverlayMessageBoard />
+      </UserProvider>
     </div>
   );
 }

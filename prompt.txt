@@ -1,0 +1,5 @@
+Scanning through the whole file structure, and get familiar with code and my style of writing(take your time and make sure you do this)
+Styling is now using css and bootstrap, try to make it easy as possible, don't add side effect unless asked to
+Command line prompts just give them out at once don't wait for me to excute, I willl excute them on my own terminal
+Try to use bootstrap internal function and elements first, then consider css
+Don't add comments, if you have anything to say just throw them in the chatbox

@@ -10,6 +10,9 @@ import { createBrowserRouter, Navigate } from 'react-router-dom'
 import CompanyBalanceSheet from 'Pages/CompanyPage/SubPages/CompanyBalanceSheet'
 import CompanyCashFlow from 'Pages/CompanyPage/SubPages/CompanyCashFlow'
 import NotFound from 'Pages/NotFound/NotFound'
+import LoginPage from 'Pages/Login/LoginPage'
+import { SignupPage } from 'Pages/Login/SignupPage'
+import ProtectedRoute from './ProtectedRoute'
 
 export const router = createBrowserRouter([
     {
@@ -21,12 +24,20 @@ export const router = createBrowserRouter([
                 element: <HomePage />
             },
             {
+                path: "login",
+                element: <LoginPage />
+            },
+            {
+                path: "signup",
+                element: <SignupPage/>
+            },
+            {
                 path: "search",
                 element: <SearchPage />
             },
             {
                 path: "company/:symbol",
-                element: <CompanyPage />,
+                element: <ProtectedRoute><CompanyPage /></ProtectedRoute>,
                 children: [
                     {
                         index: true,
